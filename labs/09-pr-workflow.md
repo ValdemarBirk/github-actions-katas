@@ -30,7 +30,7 @@ rules and then click on `add rule`.
 - Give it the pattern `main`.
 - `Require status checks to pass before merging`
   Will block the pull request from merging untill
-  the tests have passed.
+  the tests have passed. asdasd 
 - `Require branches to be up to date before merging`
   The branch must be up to date with the base
   branch before merging.
