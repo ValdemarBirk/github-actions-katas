@@ -42,15 +42,15 @@ jobs:
       with: 
         name: compiled
         path: . 
-    Docker-image:
-      runs-on: ubuntu-latest
-      needs: [Build,test]
-    - name: Download artifact
-      uses: actions/download-artifact@v2
-      with: 
-        name: compiled2
-        path: .  
-    - name: build docker
-      run: chmod +x ci/build-docker.sh && ci/build-docker.sh
-    - name: push docker
-      run: chmod +x ci/push-docker.sh && ci/push-docker.sh
+  Docker-image:
+    runs-on: ubuntu-latest
+    needs: [Build,test]
+  - name: Download artifact
+    uses: actions/download-artifact@v2
+    with: 
+      name: compiled2
+      path: .  
+  - name: build docker
+    run: chmod +x ci/build-docker.sh && ci/build-docker.sh
+  - name: push docker
+    run: chmod +x ci/push-docker.sh && ci/push-docker.sh
